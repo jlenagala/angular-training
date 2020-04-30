@@ -1,0 +1,19 @@
+<h1>Users</h1>
+<div class="container">
+<fieldset class="form-group">
+    <label>
+        Name
+    </label>
+    <input type="text" [(ngModel)]="user.name" class="form-control" name="name" required="required">
+</fieldset>
+
+<fieldset class="form-group">
+    <label>
+        Date of Birth
+    </label>
+    <input type="date"  [(ngModel)]="user.dob" class="form-control" name="dob" required="required">
+</fieldset>
+<button (click)="saveUsers()" class="btn btn-success btn-sm">Save</button>
+            
+        
+</div>

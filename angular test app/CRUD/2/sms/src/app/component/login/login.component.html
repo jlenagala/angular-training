@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="card card-info">
+        <div class="card-header">
+            <img alt="Logo" class="logo" src="../images/logo.png">
+        </div>
+        <small *ngIf='invalidLogin'>{{errorMessage}}</small>
+        <div class="card-body">
+            <form method="post">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input class="form-control" id="txtUsername" name="username" placeholder="Username" type="text" [(ngModel)]="username" >
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                    </div>
+                    <input class="form-control" id="txtPassword" name="password" placeholder="Password" type="password" [(ngModel)]="password">
+                </div>
+                <button class="btn btn-info float-right .btn-lg" id="btnLogin" type="button" (click)=handleLogin()>Log in</button>
+                <button class="btn btn-warning float-right .btn-lg" type="reset">Clear</button>
+            </form>
+            User Name: {{username}}
+        </div>
+    </div>
+</div>
